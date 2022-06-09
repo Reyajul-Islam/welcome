@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="assets/img/cyber_music.jpg">
+    <title>4000 | Coming Soon</title>
+
+    <!-- Bootstrap -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <!-- Custom stylesheet -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/counter.css">
+  </head>
+ <body>
+    <div class="bg">
+	 <div class="bg-color">
+		  <div class="container content">
+	 
+				<div class="row">
+					<div class="blazer clearfix">
+						<div class="col-sm-12">
+						   <h2>We're coming soon</h2>
+						   <h3>Stay tuned for something Amazing</h3>
+						</div>
+
+                    </div>
+                </div>
+            </div>
+     </div>
+			<!-- .container end here -->
+	 </div>
+
+    <script>
+     const second = 1000,
+             minute = second * 60,
+             hour = minute * 60,
+             day = hour * 24;
+
+     let countDown = new Date('Oct 15, 2022 00:00:00').getTime(),
+             x = setInterval(function () {
+
+                 let now = new Date().getTime(),
+                         distance = countDown - now;
+
+                 document.getElementById('days').innerText = Math.floor(distance / day),
+                         document.getElementById('hours').innerText = Math.floor(distance % day / hour),
+                         document.getElementById('minutes').innerText = Math.floor(distance % hour / minute),
+                         document.getElementById('seconds').innerText = Math.floor(distance % minute / second);
+
+                 //do something later when date is reached
+                 //if (distance < 0) {
+                 //  clearInterval(x);
+                 //  'IT'S MY BIRTHDAY!;
+                 //}
+
+             }, second);
+
+ </script>
+    </body>
+</html>
